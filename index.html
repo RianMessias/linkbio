@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Profissional</title>
     <!-- Importação do Tailwind CSS -->
+    <link href="styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Importação da Fonte Montserrat -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
@@ -59,6 +60,9 @@
             <a href="https://rianmessias.github.io/landing-page/" class="block bg-blue-500 text-white rounded-lg px-4 py-3 text-center font-semibold transition transform hover:-translate-y-1 hover:scale-110 hover:bg-blue-600">
                 Meu site portfólio
             </a>
+            <a href="https://www.linkedin.com/in/rian-messias-9b007b340/" class="block bg-blue-500 text-white rounded-lg px-4 py-3 text-center font-semibold transition transform hover:-translate-y-1 hover:scale-110 hover:bg-blue-600">
+                Meu LinkedIn
+            </a>
             <a href="https://www.instagram.com/og.meno/" class="block bg-blue-500 text-white rounded-lg px-4 py-3 text-center font-semibold transition transform hover:-translate-y-1 hover:scale-110 hover:bg-blue-600">
                 Meu Instagram
             </a>
@@ -70,51 +74,6 @@
             </a>
         </div>
     </div>
-
-    <!-- Script para o efeito de typewriter em loop -->
-    <script>
-        // Configurações do Typewriter
-        const text = "Rian Messias";
-        const typingSpeed = 150; // Velocidade de digitação em milissegundos
-        const deletingSpeed = 100; // Velocidade de deleção em milissegundos
-        const pauseTime = 2000; // Tempo de pausa após digitar a frase
-
-        let i = 0; // Índice atual da letra
-        let isDeleting = false; // Flag para indicar se está deletando
-        let loopCount = 0; // Contador de loops (opcional)
-        const typewriterText = document.getElementById("typewriter-text");
-        const typewriterCursor = document.getElementById("typewriter-cursor");
-
-        function typeWriter() {
-            const currentText = text.substring(0, i);
-            typewriterText.innerHTML = currentText;
-
-            if (!isDeleting) {
-                if (i < text.length) {
-                    i++;
-                    setTimeout(typeWriter, typingSpeed);
-                } else {
-                    // Pausa após terminar de digitar
-                    setTimeout(() => {
-                        isDeleting = true;
-                        setTimeout(typeWriter, deletingSpeed);
-                    }, pauseTime);
-                }
-            } else {
-                if (i > 0) {
-                    i--;
-                    setTimeout(typeWriter, deletingSpeed);
-                } else {
-                    isDeleting = false;
-                    setTimeout(typeWriter, typingSpeed);
-                }
-            }
-        }
-
-        // Iniciar o efeito após o carregamento da página
-        document.addEventListener("DOMContentLoaded", function() {
-            typeWriter();
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
